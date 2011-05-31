@@ -15,17 +15,13 @@ function! SetProjTags()
         endif
 
         let ctags_file = current_folder . '/' . g:projtags_ctags_file
-        echo ctags_file
         if filereadable( ctags_file )
-            echo ctags_file
             execute 'setlocal tags+=' . ctags_file
             let is_ctags_found = 1
         endif
 
         let cscope_file = current_folder . '/' . g:projtags_cscope_file
-        echo cscope_file
         if filereadable( cscope_file )
-            echo cscope_file
             execute 'cscope add ' . cscope_file
             let is_cscope_found = 1
         endif
