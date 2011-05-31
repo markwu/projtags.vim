@@ -22,7 +22,7 @@ function! SetProjTags()
 
         let cscope_file = current_folder . '/' . g:projtags_cscope_file
         if filereadable( cscope_file )
-            execute 'cscope add ' . cscope_file
+            execute 'cscope add ' . cscope_file . ' ' . current_folder
             let is_cscope_found = 1
         endif
 
