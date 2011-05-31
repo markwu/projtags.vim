@@ -40,4 +40,4 @@ function! SetProjTags()
     endwhile
 endfunction
 
-autocmd BufEnter g:projtags_file_pattern call SetProjTags()
+execute 'autocmd BufEnter ' . g:projtags_file_pattern . ' call SetProjTags()'
